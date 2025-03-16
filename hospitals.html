@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rapid Admit - Hospital Bed Management</title>
+    <link rel="stylesheet" href="hospitals.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo-container">
+                <img src="logo.jpeg" alt="Rapid Admit Logo">
+                <span class="company-name">Rapid Admit</span>
+            </div>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Hospital Bed Management</h1>
+            <p>Update bed availability in real-time to help patients find you faster.</p>
+            <form id="bedForm">
+                <label for="hospitalName">Hospital Name:</label>
+                <input type="text" id="hospitalName" required>
+
+                <label for="bedType">Bed Type:</label>
+                <select id="bedType">
+                    <option value="General">General</option>
+                    <option value="ICU">ICU</option>
+                    <option value="Ventilator">Ventilator</option>
+                </select>
+
+                <label for="availableBeds">Available Beds:</label>
+                <input type="number" id="availableBeds" required min="0">
+
+                <button type="submit" class="cta-button">Update</button>
+            </form>
+            <div id="responseMessage"></div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Rapid Admit. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.getElementById('bedForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent the default form submission
+    
+            const hospitalName = document.getElementById('hospitalName').value;
+            const bedType = document.getElementById('bedType').value;
+            const availableBeds = document.getElementById('availableBeds').value;
+    
+            // Send data to the backend
+            fetch('http://localhost:5001/api/bed-vacancies', { // Adjust the URL if needed
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ hospitalName, bedCount: availableBeds, location: bedType })
+            })
+            .then(response => response.json())
+            .then(data => {
+                // Handle successful submission
+                alert('Bed vacancy added successfully!');
+                // Optionally, clear the form fields
+                document.getElementById('bedForm').reset();
+            })
+            .catch(error => {
+                // Handle errors
+                console.error('Error:', error);
+                alert('Failed to add bed vacancy.');
+            });
+        });
+    </script>
+    
+</body>
+</html>

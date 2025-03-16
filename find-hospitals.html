@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find Nearby Hospitals - Rapid Admit</title>
+    <link rel="stylesheet" href="styles_find-hospitals.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+</head>
+<body>
+    <header>
+        <h1>Rapid Admit</h1>
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="find-hospitals.html">Find Nearby Hospitals</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="find-hospitals">
+        <h2>Find Nearby Hospitals</h2>
+        <p id="user-location">Locating...</p>
+        <div id="map"></div>
+        <ul id="hospital-list"></ul>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Rapid Admit. All rights reserved.</p>
+    </footer>
+
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

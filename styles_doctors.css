@@ -1,0 +1,106 @@
+/* General Styling */
+body {
+    margin: 0;
+    font-family: 'Roboto', Arial, sans-serif;
+    color: #333;
+    background-color: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    zoom: 1; /* Prevent unwanted scaling */
+}
+
+/* Header Styling */
+header {
+    background: linear-gradient(to top right, #012b54, #559eed);
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Doctor List Styling */
+.doctor-list {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center align content horizontally */
+    text-align: center; /* Center align text inside */
+    width: 100%;
+    box-sizing: border-box; /* Include padding in element width */
+}
+
+#hospital-name {
+    margin-bottom: 20px; /* Space below the heading */
+    font-size: 2em; /* Adjust font size as needed */
+    color: #012b54; /* Optional: Adjust color to match design */
+}
+
+#doctors {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive columns */
+    gap: 20px; /* Space between grid items */
+    max-width: 1200px; /* Optional: Limits the width of the grid */
+    width: 100%;
+    box-sizing: border-box; /* Include padding in element width */
+}
+
+#doctors li {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#doctors img {
+    border-radius: 50%;
+    width: 100px; /* Set a fixed width for images */
+    height: 100px; /* Set a fixed height for images */
+    object-fit: cover; /* Ensure the image covers the given dimensions */
+    margin-bottom: 10px;
+}
+
+.doctor-info {
+    margin-top: 10px;
+}
+
+.book-button {
+    background: linear-gradient(to top right, #012b54, #559eed); /* Same gradient as the cta-button */
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1em;
+    border-radius: 30px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.book-button:hover {
+    background: linear-gradient(to top right, #012b54, #559eed);
+    transform: translateY(-3px);
+}
+
+/* Footer Styling */
+footer {
+    text-align: center;
+    background: linear-gradient(to top right, #012b54, #559eed);
+    padding: 15px 0;
+    color: #fff;
+    font-size: 0.9em;
+    width: 100%;
+    box-sizing: border-box; /* Include padding in element width */
+    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}

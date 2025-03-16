@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctors List - Rapid Admit</title>
+    <link rel="stylesheet" href="styles_doctors.css">
+</head>
+<body>
+    <header>
+        <h1>Doctors Available for OPD</h1>
+    </header>
+
+    <section class="doctor-list">
+        <h2 id="hospital-name">Doctors at<br></h2>
+        <ul id="doctors">
+            <li>
+                <img src="images/doc_fem_1.png" alt="Dr. Aarti Sharma">
+                <div class="doctor-info">
+                    <strong>Dr. Aarti Sharma</strong><br>
+                    <p>Specialist in Cardiology</p>
+                    <p>Contact: +91-9876543210</p>
+                    <button class="book-button" onclick="bookAppointment('Dr. Aarti Sharma')">Book Appointment</button>
+                </div>
+            </li>
+            <li>
+                <img src="images/doc_m_1.png" alt="Dr. Raj Patel">
+                <div class="doctor-info">
+                    <strong>Dr. Raj Patel</strong><br>
+                    <p>Specialist in Neurology</p>
+                    <p>Contact: +91-8765432109</p>
+                    <button class="book-button" onclick="bookAppointment('Dr. Raj Patel')">Book Appointment</button>
+                </div>
+            </li>
+            <li>
+                <img src="images/doc_fem_2.png" alt="Dr. Priya Gupta">
+                <div class="doctor-info">
+                    <strong>Dr. Priya Gupta</strong><br>
+                    <p>Specialist in Pediatrics</p>
+                    <p>Contact: +91-7654321098</p>
+                    <button class="book-button" onclick="bookAppointment('Dr. Priya Gupta')">Book Appointment</button>
+                </div>
+            </li>
+            <li>
+                <img src="images/doc_m_2.png" alt="Dr. Vikram Singh">
+                <div class="doctor-info">
+                    <strong>Dr. Vikram Singh</strong><br>
+                    <p>Specialist in Orthopedics</p>
+                    <p>Contact: +91-6543210987</p>
+                    <button class="book-button" onclick="bookAppointment('Dr. Vikram Singh')">Book Appointment</button>
+                </div>
+            </li>
+            <li>
+                <img src="images/doc_fem_3.png" alt="Dr. Neha Mehta">
+                <div class="doctor-info">
+                    <strong>Dr. Neha Mehta</strong><br>
+                    <p>Specialist in Dermatology</p>
+                    <p>Contact: +91-5432109876</p>
+                    <button class="book-button" onclick="bookAppointment('Dr. Neha Mehta')">Book Appointment</button>
+                </div>
+            </li>
+            <li>
+                <img src="images/doc_m_3.png" alt="Dr. Arjun Rao">
+                <div class="doctor-info">
+                    <strong>Dr. Arjun Rao</strong><br>
+                    <p>Specialist in Internal Medicine</p>
+                    <p>Contact: +91-4321098765</p>
+                    <button class="book-button" onclick="bookAppointment('Dr. Arjun Rao')">Book Appointment</button>
+                </div>
+            </li>
+        </ul>
+    </section>
+
+    <!-- <footer>
+        <p>&copy; 2024 Rapid Admit. All rights reserved.</p>
+    </footer> -->
+
+    <script>
+        function bookAppointment(doctorName) {
+            // Redirect to a confirmation page with the doctor's name
+            window.location.href = `home.html?doctor=${encodeURIComponent(doctorName)}`;
+            
+            // Show an alert
+            alert(`Appointment with ${doctorName} booked successfully!`);
+        }
+
+        // Get the hospital name from the URL and display it
+        const urlParams = new URLSearchParams(window.location.search);
+        const hospitalName = urlParams.get('hospital');
+        if (hospitalName) {
+            document.getElementById('hospital-name').innerText += hospitalName;
+        }
+    </script>
+</body>
+</html>

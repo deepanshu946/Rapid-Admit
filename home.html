@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rapid Admit - Home</title>
+    <link rel="stylesheet" href="styles_home.css">
+    <link rel="stylesheet" href="styles_chatbot.css">
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'en',
+                includedLanguages: 'es,fr,de,it,pt,zh-CN,ja,ko,hi',
+                layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+            }, 'google_translate_element');
+        }
+    </script>
+    <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo-container">
+                <img src="logo.jpeg" alt="Rapid Admit Logo">
+                <span class="company-name">Rapid Admit</span>
+            </div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+            <div id="google_translate_element"></div>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Welcome to <br> Rapid Admit</h1>
+            <p>Your Health, Our Priority. <br> Find Nearby Hospitals in just a click.<br></p>
+            <a href="find-hospitals.html" class="cta-button">Find Nearby Hospitals</a>
+        </div>
+    </section>
+
+    <!-- Overlay for the buttons -->
+    <!-- <div id="overlay">
+        <div class="overlay-content">
+            <button id="continue-patient">Continue as a Patient</button>
+            <button id="continue-hospital">Continue as a Hospital</button>
+        </div>
+    </div> -->
+    <div id="overlay" class="overlay">
+        <div class="overlay-content">
+            <button id="continue-patient">Continue as a Patient</button>
+            <button id="continue-hospital">Continue as a Hospital</button>
+        </div>
+    </div>
+    
+
+<!-- Chatbot Container -->
+<div class="chatbot-container">
+    <div id="chatbox" class="chatbox"></div>
+    <div class="chat-input">
+        <input type="text" id="userInput" placeholder="Type a message..." autocomplete="off">
+        <button id="sendBtn">Send</button>
+        <button id="voiceBtn">🎤</button> <!-- Voice input button -->
+    </div>
+</div>
+
+<!-- Chatbot Toggle Button -->
+<button class="chatbot-toggle" id="open-chatbot">
+    <img src="robot.png" alt="Chatbot">
+</button>
+
+<footer>
+    <p>&copy; 2024 Rapid Admit. All rights reserved.</p>
+</footer>
+
+<script src="home.js"></script> <!-- Link to the existing JavaScript file -->
+<script src="script.js"></script>
+
+</body>
+</html>

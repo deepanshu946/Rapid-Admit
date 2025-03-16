@@ -1,0 +1,155 @@
+/* General Styling */
+body {
+    margin: 0;
+    font-family: 'Roboto', Arial, sans-serif;
+    color: #333;
+    background-color: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Header Styling */
+header {
+    background: linear-gradient(to top right, #012b54, #559eed);
+    padding: 25px 30px; /* Increased padding to make the header bigger */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+header h1 {
+    color: #fff;
+    font-size: 2em; /* Increased font size */
+    margin: 0;
+}
+
+header nav {
+    display: flex;
+    align-items: center;
+}
+
+header nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+}
+
+header nav ul li {
+    margin: 0 20px;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2em; /* Slightly increased font size */
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+    color: #FFD700;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        padding: 20px; /* Adjusted padding for mobile view */
+    }
+
+    header nav ul {
+        flex-direction: column;
+        margin-top: 10px;
+    }
+
+    header nav ul li {
+        margin: 10px 0;
+    }
+
+    header h1 {
+        font-size: 1.7em; /* Slightly increased font size */
+    }
+}
+
+/* Find Hospitals Section Styling */
+.find-hospitals {
+    padding: 40px 30px;
+    flex-grow: 1;
+    background-color: #ffffff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    margin: 100px auto 30px;
+    max-width: 900px;
+}
+
+.find-hospitals h2 {
+    font-size: 2.5em;
+    color: #012b54;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.find-hospitals p {
+    font-size: 1.2em;
+    color: #333;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+#map {
+    height: 400px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+#hospital-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    font-size: 1.1em;
+    color: #555;
+}
+
+#hospital-list li {
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+    transition: background-color 0.3s ease;
+    display: flex;
+    align-items: center;
+}
+
+#hospital-list li:last-child {
+    border-bottom: none;
+}
+
+#hospital-list li:hover {
+    background-color: #f9f9f9;
+}
+
+#hospital-list img {
+    width: 100px;
+    height: auto;
+    margin-right: 15px;
+}
+
+/* Footer Styling */
+footer {
+    text-align: center;
+    background: linear-gradient(to top right, #012b54, #559eed);
+    padding: 20px 0;
+    color: #fff;
+    font-size: 1em;
+    width: 100%;
+    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+    margin-top: 50px;
+}
